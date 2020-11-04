@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Coiny&display=swap');
+
+.container {
+  font-size: 20px;
+}
+
+h1, h2, h3, h4, p, button {
+  font-family: 'Coiny', sans-serif;
+  /* font-size: 110%; */
+  line-height: 1em;
+}
+
+
+
+.education {
+  background-color: #f94144;
+}
+.recreational {
+  background-color: #f3722c;
+}
+.diy {
+  background-color: #f8961e;
+}
+.cooking {
+  background-color: #f9c74f;
+}
+.relaxation {
+  background-color: #90be6d;
+}
+.music {
+  background-color: #43aa8b;
+}
+.busywork {
+  background-color: #577590;
+}
