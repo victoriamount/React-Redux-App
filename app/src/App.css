@@ -33,3 +33,6 @@ h1, h2, h3, h4, p, button {
 .busywork {
   background-color: #577590;
 }
+.loading {
+  background-color: black;
+}

@@ -21,10 +21,13 @@ const StyledActivity = Styled.div`
 
 const Idea = (props) => {
     return (
-        <StyledActivity className={props.activityData.type} >
-                {getActivityIcon(props.activityData.type)}
+        <>          
+            <StyledActivity className={props.activityData.type} >  
+                {getActivityIcon(props.activityData.type)} 
                 <h2>{props.activityData.activity}</h2>
-        </StyledActivity>
+            </StyledActivity>
+
+        </>
     )
 }
 

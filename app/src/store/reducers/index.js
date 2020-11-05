@@ -3,7 +3,8 @@ import { ACTIVITY_ERROR, ACTIVITY_SUCCESS, ACTIVITY_LOADING } from "../actions"
 const initialState = {
     isLoading: false,
     activityData: {},
-    error: ''
+    error: '', 
+    showActivity: false
 }
 
 export const activityReducer = (state = initialState, action) => {
@@ -12,21 +13,24 @@ export const activityReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: true,
-                error: ''
+                error: '',
+                showActivity: false
             }
         case ACTIVITY_SUCCESS:
             return {
                 ...state,
                 isLoading: false,
                 activityData: action.payload,
-                error: ''
+                error: '',
+                showActivity: true
             }
         case ACTIVITY_ERROR: 
             return {
                 ...state,
                 isLoading: false,
                 activityData: {},
-                error: action.payload
+                error: action.payload,
+                showActivity: false
             }
         default:
             return state
