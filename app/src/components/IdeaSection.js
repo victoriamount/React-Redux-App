@@ -6,27 +6,15 @@ import { fetchActivities } from '../store/actions'
 
 const StyledIdeaSection = Styled.div`
     display: flex;
-    width: 49%;
+    width: 60%;
     height: 100vh;
-    /* border: 1px solid green; */
     justify-content: center;
     align-items: center;
 `
 
 const IdeaSection = (props) => {
     return (
-        <>
-        {/* Loading */}
-        {props.isLoading ? <p>Loading activity... </p> : null}
-
-        {/* Error */}
-        {props.error ? <p>{props.error}</p> : null}  
-        {/* Success */}
-        {props.showActivity
-            ? <StyledIdeaSection><Idea /></StyledIdeaSection>
-            : null}
-        
-        </>
+        <StyledIdeaSection><Idea /></StyledIdeaSection>
     )
 }
 

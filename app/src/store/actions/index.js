@@ -14,11 +14,6 @@ export const fetchActivities = (activity) => {
                 `http://www.boredapi.com/api/activity?type=${activity}`
             )
             .then(res => {
-                // if (res.data.type === 'charity' || res.data.type === 'social') {
-                //     dispatch({ type: ACTIVITY_ERROR, payload: 'Select a valid activity' })
-                //     console.log('inside if')
-                // }
-                console.log('API call: ', res.data)
                 dispatch({ type: ACTIVITY_SUCCESS, payload: res.data })                 
             })
             .catch(err => {

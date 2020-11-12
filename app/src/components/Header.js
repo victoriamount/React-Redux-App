@@ -8,11 +8,9 @@ const StyledHeaderSection = Styled.header`
     display: flex;
     flex-flow: column nowrap;
     width: 40%;
-    height: 85vh;
-    padding: 5%;
+    height: 100vh;
     align-items: center;
     justify-content: space-around;
-    /* border: 1px solid red; */
     color: white;
     background-color: black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -34,13 +32,14 @@ const StyledHeaderSection = Styled.header`
 `
 
 const Header = (props) => {
+    const { fetchActivities } = props
 
     const [clicked, setClicked] = useState('')
 
     useEffect(() => {
         console.log(clicked)
-        props.fetchActivities(clicked)
-    }, [clicked])
+        fetchActivities(clicked)
+    }, [clicked, fetchActivities])
 
     return (
         <StyledHeaderSection>
@@ -53,6 +52,8 @@ const Header = (props) => {
             <button onClick={() => {setClicked('relaxation')}}className='relaxation'>Relaxation</button>
             <button onClick={() => {setClicked('music')}}className='music'>Music</button>
             <button onClick={() => {setClicked('busywork')}}className='busywork'>Busy Work</button>
+            <button onClick={() => {setClicked('charity')}}className='charity'>Charity</button>
+            <button onClick={() => {setClicked('social')}}className='social'>Social</button>
         </StyledHeaderSection>
     )
 }

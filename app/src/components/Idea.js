@@ -10,7 +10,6 @@ const StyledActivity = Styled.div`
     align-items: center;
     width: 35vw;
     height: 35vw;
-    /* border: 1px solid red; */
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     h2{
@@ -24,7 +23,7 @@ const Idea = (props) => {
         <>          
             <StyledActivity className={props.activityData.type} >  
                 {getActivityIcon(props.activityData.type)} 
-                <h2>{props.activityData.activity}</h2>
+                {props.isLoading ? <h2>Loading activity... </h2> : <h2>{props.activityData.activity}</h2>}
             </StyledActivity>
 
         </>
@@ -46,7 +45,11 @@ const getActivityIcon = (activity) => {
         case 'music':
             return <span>📻</span>
         case 'busywork':
-            return <span>🧹</span>            
+            return <span>🧹</span>   
+        case 'charity':
+            return <span>❤️</span>  
+        case 'social':
+            return <span>📱</span>       
         default:
             return <span>😀</span>
     }

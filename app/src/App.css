@@ -31,8 +31,15 @@ h1, h2, h3, h4, p, button {
   background-color: #43aa8b;
 }
 .busywork {
-  background-color: #577590;
+  background-color: #048ba8;
 }
+.charity {
+  background-color: #2c699a;
+}
+.social {
+  background-color: #54478c;
+}
+
 .loading {
   background-color: black;
 }
