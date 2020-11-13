@@ -11,7 +11,7 @@ export const fetchActivities = (activity) => {
 
         axios
             .get(
-                `http://www.boredapi.com/api/activity?type=${activity}`
+                `https://www.boredapi.com/api/activity?type=${activity}`
             )
             .then(res => {
                 dispatch({ type: ACTIVITY_SUCCESS, payload: res.data })                 
