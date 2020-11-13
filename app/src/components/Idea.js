@@ -15,6 +15,7 @@ const StyledActivity = Styled.div`
     h2{
         text-align: center;
         color: white;
+        
     }
 `
 
